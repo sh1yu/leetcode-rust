@@ -1,24 +1,7 @@
 //21. 合并两个有序链表
 //将两个升序链表合并为一个新的 升序 链表并返回。新链表是通过拼接给定的两个链表的所有节点组成的。
 
-// Definition for singly-linked list.
-#[derive(PartialEq, Eq, Clone, Debug)]
-pub struct ListNode {
-    pub val: i32,
-    pub next: Option<Box<ListNode>>,
-}
-
-impl ListNode {
-    #[inline]
-    fn new(val: i32) -> Self {
-        ListNode {
-            next: None,
-            val,
-        }
-    }
-}
-
-pub struct Solution {}
+use super::{ListNode, Solution};
 
 impl Solution {
     pub fn merge_two_lists(l1: Option<Box<ListNode>>, l2: Option<Box<ListNode>>) -> Option<Box<ListNode>> {
@@ -93,6 +76,6 @@ mod tests {
         l2.as_mut().unwrap().next.as_mut().unwrap().next = Option::Some(Box::new(ListNode::new(18)));
 
         // println!("{:?}", Solution::merge_two_lists(l1, l2));
-        println!("{:?}", Solution::merge_two_lists2(l1, l2));
+        println!("{}", Solution::format_list(&Solution::merge_two_lists2(l1, l2)));
     }
 }

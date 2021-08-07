@@ -2,24 +2,7 @@
 //给定一个链表，两两交换其中相邻的节点，并返回交换后的链表。
 // 你不能只是单纯的改变节点内部的值，而是需要实际的进行节点交换。
 
-// Definition for singly-linked list.
-#[derive(PartialEq, Eq, Clone, Debug)]
-pub struct ListNode {
-    pub val: i32,
-    pub next: Option<Box<ListNode>>,
-}
-
-impl ListNode {
-    #[inline]
-    fn new(val: i32) -> Self {
-        ListNode {
-            next: None,
-            val,
-        }
-    }
-}
-
-pub struct Solution {}
+use super::{ListNode, Solution};
 
 impl Solution {
     pub fn swap_pairs(head: Option<Box<ListNode>>) -> Option<Box<ListNode>> {
@@ -57,6 +40,6 @@ mod tests {
         l1.as_mut().unwrap().next.as_mut().unwrap().next.as_mut().unwrap().next = Option::Some(Box::new(ListNode::new(40)));
         l1.as_mut().unwrap().next.as_mut().unwrap().next.as_mut().unwrap().next.as_mut().unwrap().next = Option::Some(Box::new(ListNode::new(50)));
 
-        println!("{:?}", Solution::swap_pairs(l1));
+        println!("{}", Solution::format_list(&Solution::swap_pairs(l1)));
     }
 }

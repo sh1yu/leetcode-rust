@@ -4,7 +4,7 @@
 //
 // 注意：答案中不可以包含重复的三元组。
 
-pub struct Solution {}
+use super::{Solution};
 
 impl Solution {
     pub fn three_sum(nums: Vec<i32>) -> Vec<Vec<i32>> {
