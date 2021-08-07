@@ -5,6 +5,7 @@ mod move_zeros;
 mod swap_pairs;
 mod three_sum;
 mod reverse_list;
+mod has_cycle;
 
 // Definition for singly-linked list.
 #[derive(PartialEq, Eq, Clone, Debug)]
