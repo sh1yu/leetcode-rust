@@ -16,6 +16,8 @@ mod merge;
 mod two_sum;
 mod plus_one;
 mod trap;
+mod valid_parentheses;
+mod min_stack;
 
 // Definition for singly-linked list.
 #[derive(PartialEq, Eq, Clone, Debug)]

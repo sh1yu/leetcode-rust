@@ -75,7 +75,19 @@ mod tests {
         l2.as_mut().unwrap().next = Option::Some(Box::new(ListNode::new(12)));
         l2.as_mut().unwrap().next.as_mut().unwrap().next = Option::Some(Box::new(ListNode::new(18)));
 
-        // println!("{:?}", Solution::merge_two_lists(l1, l2));
+        println!("{}", Solution::format_list(&Solution::merge_two_lists(l1, l2)));
+    }
+
+    #[test]
+    fn it_works_2() {
+        let mut l1 = Option::Some(Box::new(ListNode::new(10)));
+        l1.as_mut().unwrap().next = Option::Some(Box::new(ListNode::new(20)));
+        l1.as_mut().unwrap().next.as_mut().unwrap().next = Option::Some(Box::new(ListNode::new(30)));
+
+        let mut l2 = Option::Some(Box::new(ListNode::new(5)));
+        l2.as_mut().unwrap().next = Option::Some(Box::new(ListNode::new(12)));
+        l2.as_mut().unwrap().next.as_mut().unwrap().next = Option::Some(Box::new(ListNode::new(18)));
+
         println!("{}", Solution::format_list(&Solution::merge_two_lists2(l1, l2)));
     }
 }
