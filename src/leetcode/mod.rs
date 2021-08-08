@@ -9,6 +9,7 @@ mod three_sum;
 mod reverse_list;
 mod has_cycle;
 mod detect_cycle;
+mod circular_deque;
 
 // Definition for singly-linked list.
 #[derive(PartialEq, Eq, Clone, Debug)]
