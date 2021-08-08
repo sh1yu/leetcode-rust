@@ -1,4 +1,6 @@
 use std::fmt::{Debug, Display, Formatter, Result};
+use std::rc::Rc;
+use std::cell::RefCell;
 
 mod merge_two_lists;
 mod move_zeros;
@@ -6,6 +8,7 @@ mod swap_pairs;
 mod three_sum;
 mod reverse_list;
 mod has_cycle;
+mod detect_cycle;
 
 // Definition for singly-linked list.
 #[derive(PartialEq, Eq, Clone, Debug)]
@@ -27,6 +30,21 @@ impl ListNode {
 impl Display for ListNode {
     fn fmt(&self, f: &mut Formatter<'_>) -> Result {
         write!(f, "{}", self.val)
+    }
+}
+
+#[derive(PartialEq, Eq, Clone, Debug)]
+pub struct RcListNode {
+    val: i32,
+    next: Option<Rc<RefCell<RcListNode>>>,
+}
+
+impl RcListNode {
+    pub fn new(val: i32) -> RcListNode {
+        RcListNode {
+            val: val,
+            next: None,
+        }
     }
 }
 
