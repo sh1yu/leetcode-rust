@@ -22,6 +22,7 @@ mod largest_rectangle_area;
 mod valid_anagram;
 mod group_anagrams;
 mod intersection_of_two_arrays_ii;
+mod max_sliding_window;
 
 // Definition for singly-linked list.
 #[derive(PartialEq, Eq, Clone, Debug)]
