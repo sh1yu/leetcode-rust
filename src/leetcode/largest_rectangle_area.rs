@@ -4,7 +4,6 @@
 // 求在该柱状图中，能够勾勒出来的矩形的最大面积。
 
 use super::Solution;
-use std::cmp::max;
 
 impl Solution {
     pub fn largest_rectangle_area(heights: Vec<i32>) -> i32 {

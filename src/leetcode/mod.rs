@@ -19,6 +19,7 @@ mod trap;
 mod valid_parentheses;
 mod min_stack;
 mod largest_rectangle_area;
+mod valid_anagram;
 
 // Definition for singly-linked list.
 #[derive(PartialEq, Eq, Clone, Debug)]
