@@ -6,6 +6,8 @@ use super::Solution;
 use std::collections::HashMap;
 
 impl Solution {
+
+    // 常规hash思路
     pub fn is_anagram(s: String, t: String) -> bool {
         let mut ht = HashMap::new();
         for c in s.chars() {
@@ -21,6 +23,7 @@ impl Solution {
         ht.iter().all(|(_, &v)| v == 0)
     }
 
+    // 方法2，直接使用for_each，更为简短；而且直接将字符映射到数组上，更有效率
     pub fn is_anagram2(s: String, t: String) -> bool {
         let mut hash = [0; 26];
         s.chars().for_each(|ch| hash[(ch as u8 - 'a' as u8) as usize] += 1);
