@@ -24,6 +24,9 @@ mod group_anagrams;
 mod intersection_of_two_arrays_ii;
 mod max_sliding_window;
 mod reverse_k_group;
+mod inorder_traversal;
+mod preorder_traversal;
+mod remove_outer_parentheses;
 
 // Definition for singly-linked list.
 #[derive(PartialEq, Eq, Clone, Debug)]
@@ -50,8 +53,8 @@ impl Display for ListNode {
 
 #[derive(PartialEq, Eq, Clone, Debug)]
 pub struct RcListNode {
-    val: i32,
-    next: Option<Rc<RefCell<RcListNode>>>,
+    pub val: i32,
+    pub next: Option<Rc<RefCell<RcListNode>>>,
 }
 
 impl RcListNode {
@@ -59,6 +62,24 @@ impl RcListNode {
         RcListNode {
             val: val,
             next: None,
+        }
+    }
+}
+
+#[derive(Debug, PartialEq, Eq)]
+pub struct TreeNode {
+    pub val: i32,
+    pub left: Option<Rc<RefCell<TreeNode>>>,
+    pub right: Option<Rc<RefCell<TreeNode>>>,
+}
+
+impl TreeNode {
+    #[inline]
+    pub fn new(val: i32) -> Self {
+        TreeNode {
+            val,
+            left: None,
+            right: None,
         }
     }
 }
