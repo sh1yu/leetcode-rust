@@ -23,6 +23,7 @@ mod valid_anagram;
 mod group_anagrams;
 mod intersection_of_two_arrays_ii;
 mod max_sliding_window;
+mod reverse_k_group;
 
 // Definition for singly-linked list.
 #[derive(PartialEq, Eq, Clone, Debug)]
