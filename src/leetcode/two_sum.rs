@@ -19,6 +19,17 @@ impl Solution {
         }
         vec![]
     }
+
+    pub fn two_sum2(nums: Vec<i32>, target: i32) -> Vec<i32> {
+        let mut ht = std::collections::HashMap::new();
+        for (i, &num) in nums.iter().enumerate() {
+            match ht.get(&num) {
+                Some(&n) => {return vec![n, i as i32];}
+                None => {ht.insert(target-num, i as i32);}
+            }
+        }
+        return vec![];
+    }
 }
 
 #[cfg(test)]
@@ -29,5 +40,11 @@ mod tests {
     fn it_works() {
         println!("{:?}", Solution::two_sum(vec![2, 7, 11, 15], 9));
         println!("{:?}", Solution::two_sum(vec![3, 2, 4], 6));
+    }
+
+    #[test]
+    fn it_works2() {
+        println!("{:?}", Solution::two_sum2(vec![2, 7, 11, 15], 9));
+        println!("{:?}", Solution::two_sum2(vec![3, 2, 4], 6));
     }
 }
