@@ -27,6 +27,9 @@ mod reverse_k_group;
 mod inorder_traversal;
 mod preorder_traversal;
 mod remove_outer_parentheses;
+mod fizz_buzz;
+mod add_digits;
+mod max_depth;
 
 // Definition for singly-linked list.
 #[derive(PartialEq, Eq, Clone, Debug)]
