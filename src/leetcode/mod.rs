@@ -30,6 +30,9 @@ mod remove_outer_parentheses;
 mod fizz_buzz;
 mod add_digits;
 mod max_depth;
+mod get_least_numbers;
+mod is_ugly;
+mod nth_ugly_number;
 
 // Definition for singly-linked list.
 #[derive(PartialEq, Eq, Clone, Debug)]
