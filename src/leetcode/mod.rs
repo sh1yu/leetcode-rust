@@ -35,6 +35,7 @@ mod is_ugly;
 mod nth_ugly_number;
 mod top_k_frequent;
 mod replace_space;
+mod reverse_print;
 
 // Definition for singly-linked list.
 #[derive(PartialEq, Eq, Clone, Debug)]
