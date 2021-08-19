@@ -38,6 +38,7 @@ mod tests {
 
     #[test]
     fn it_works() {
-        println!("{:?}", Solution::fizz_buzz(15));
+        let expect = vec!["1", "2", "Fizz", "4", "Buzz", "Fizz", "7", "8", "Fizz", "Buzz", "11", "Fizz", "13", "14", "FizzBuzz"];
+        assert_eq!(expect, Solution::fizz_buzz(15));
     }
 }

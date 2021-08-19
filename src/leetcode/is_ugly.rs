@@ -27,10 +27,10 @@ mod tests {
 
     #[test]
     fn it_works() {
-        println!("{:?}", Solution::is_ugly(1));
-        println!("{:?}", Solution::is_ugly(6));
-        println!("{:?}", Solution::is_ugly(7));
-        println!("{:?}", Solution::is_ugly(8));
-        println!("{:?}", Solution::is_ugly(14));
+        assert_eq!(true, Solution::is_ugly(1));
+        assert_eq!(true, Solution::is_ugly(6));
+        assert_eq!(false, Solution::is_ugly(7));
+        assert_eq!(true, Solution::is_ugly(8));
+        assert_eq!(false, Solution::is_ugly(14));
     }
 }

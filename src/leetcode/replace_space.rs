@@ -21,6 +21,6 @@ mod tests {
 
     #[test]
     fn it_works() {
-        println!("{:?}", Solution::replace_space("We are happy.".into()));
+        assert_eq!("We%20are%20happy.", Solution::replace_space("We are happy.".into()));
     }
 }

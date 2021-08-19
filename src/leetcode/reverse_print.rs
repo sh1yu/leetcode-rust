@@ -35,6 +35,6 @@ mod tests {
         tail = tail.next.as_mut().unwrap();
         tail.next = Option::Some(Box::new(ListNode::new(5)));
 
-        println!("{:?}", Solution::reverse_print(head));
+        assert_eq!(vec![5, 4, 3, 2, 1], Solution::reverse_print(head));
     }
 }

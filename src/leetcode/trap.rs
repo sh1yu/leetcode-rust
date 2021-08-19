@@ -31,7 +31,7 @@ mod tests {
 
     #[test]
     fn it_works() {
-        println!("{:?}", Solution::trap(vec![0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1]));
-        println!("{:?}", Solution::trap(vec![4, 2, 0, 3, 2, 5]));
+        assert_eq!(6, Solution::trap(vec![0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1]));
+        assert_eq!(9, Solution::trap(vec![4, 2, 0, 3, 2, 5]));
     }
 }

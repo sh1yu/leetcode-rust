@@ -41,6 +41,6 @@ mod tests {
         let mut vec1 = vec![10, 20, 30, 40, 50, 60, 70, 0, 0, 0];
         let mut vec2 = vec![32, 34, 39];
         Solution::merge(&mut vec1, 7, &mut vec2, 3);
-        println!("{:?}", vec1);
+        assert_eq!(vec![10, 20, 30, 32, 34, 39, 40, 50, 60, 70], vec1);
     }
 }

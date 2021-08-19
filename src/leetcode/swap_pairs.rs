@@ -40,6 +40,6 @@ mod tests {
         l1.as_mut().unwrap().next.as_mut().unwrap().next.as_mut().unwrap().next = Option::Some(Box::new(ListNode::new(40)));
         l1.as_mut().unwrap().next.as_mut().unwrap().next.as_mut().unwrap().next.as_mut().unwrap().next = Option::Some(Box::new(ListNode::new(50)));
 
-        println!("{}", Solution::format_list(&Solution::swap_pairs(l1)));
+        assert_eq!("20 -> 10 -> 40 -> 30 -> 50 -> None", Solution::format_list(&Solution::swap_pairs(l1)));
     }
 }

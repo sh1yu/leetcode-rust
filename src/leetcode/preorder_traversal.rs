@@ -33,6 +33,6 @@ mod tests {
         let node3 = Rc::new(RefCell::new(TreeNode::new(3)));
         node2.borrow_mut().left = Some(node3);
         node1.borrow_mut().right = Some(node2);
-        println!("{:?}", Solution::preorder_traversal(Some(node1)));
+        assert_eq!(vec![1, 2, 3], Solution::preorder_traversal(Some(node1)));
     }
 }

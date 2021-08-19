@@ -66,8 +66,8 @@ mod test {
 
     #[test]
     fn it_works() {
-        println!("{:?}", Solution::top_k_frequent(vec![1, 1, 1, 2, 2, 3], 2));
-        println!("{:?}", Solution::top_k_frequent(vec![1], 1));
-        println!("{:?}", Solution::top_k_frequent(vec![1, 2], 2));
+        assert_eq!(vec![2, 1].sort(), Solution::top_k_frequent(vec![1, 1, 1, 2, 2, 3], 2).sort());
+        assert_eq!(vec![1].sort(), Solution::top_k_frequent(vec![1], 1).sort());
+        assert_eq!(vec![1, 2].sort(), Solution::top_k_frequent(vec![1, 2], 2).sort());
     }
 }

@@ -30,7 +30,7 @@ mod tests {
 
     #[test]
     fn it_works() {
-        println!("{:?}", Solution::least_numbers(vec![3, 2, 1], 2));
-        println!("{:?}", Solution::least_numbers(vec![0, 1, 2, 1], 1));
+        assert_eq!(vec![2, 1], Solution::least_numbers(vec![3, 2, 1], 2));
+        assert_eq!(vec![0], Solution::least_numbers(vec![0, 1, 2, 1], 1));
     }
 }

@@ -54,7 +54,7 @@ mod tests {
         node4_rc.borrow_mut().next = Some(node2_rc);
 
         let head = Some(node1);
-        println!("{}", Solution::has_cycle(head));
+        assert_eq!(true, Solution::has_cycle(head));
     }
 
     #[test]
@@ -68,6 +68,6 @@ mod tests {
         node1.borrow_mut().next = Some(node2);
 
         let head = Some(node1);
-        println!("{}", Solution::has_cycle(head));
+        assert_eq!(false, Solution::has_cycle(head));
     }
 }

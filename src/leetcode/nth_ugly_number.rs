@@ -40,8 +40,8 @@ mod tests {
 
     #[test]
     fn it_works() {
-        println!("{:?}", Solution::nth_ugly_number(1));
-        println!("{:?}", Solution::nth_ugly_number(10));
-        println!("{:?}", Solution::nth_ugly_number(1407));
+        assert_eq!(1, Solution::nth_ugly_number(1));
+        assert_eq!(12, Solution::nth_ugly_number(10));
+        assert_eq!(536870912, Solution::nth_ugly_number(1407));
     }
 }

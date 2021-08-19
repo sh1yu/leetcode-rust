@@ -71,6 +71,6 @@ mod tests {
         next = next.next.as_mut().unwrap();
         next.next = Option::Some(Box::new(ListNode::new(50)));
 
-        println!("{}", Solution::format_list(&Solution::reverse_k_group(l1, 3)));
+        assert_eq!("30 -> 20 -> 10 -> 40 -> 50 -> None", Solution::format_list(&Solution::reverse_k_group(l1, 3)));
     }
 }

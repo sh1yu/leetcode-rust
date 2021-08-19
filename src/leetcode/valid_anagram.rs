@@ -39,13 +39,13 @@ mod tests {
 
     #[test]
     fn it_works() {
-        println!("{:?}", Solution::is_anagram(String::from("anagram"), String::from("nagaram")));
-        println!("{:?}", Solution::is_anagram(String::from("cat"), String::from("car")));
-        println!("{:?}", Solution::is_anagram(String::from("ca"), String::from("car")));
-        println!("{:?}", Solution::is_anagram(String::from("cat"), String::from("ca")));
-        println!("{:?}", Solution::is_anagram2(String::from("anagram"), String::from("nagaram")));
-        println!("{:?}", Solution::is_anagram2(String::from("cat"), String::from("car")));
-        println!("{:?}", Solution::is_anagram2(String::from("ca"), String::from("car")));
-        println!("{:?}", Solution::is_anagram2(String::from("cat"), String::from("ca")));
+        assert_eq!(true, Solution::is_anagram(String::from("anagram"), String::from("nagaram")));
+        assert_eq!(false, Solution::is_anagram(String::from("cat"), String::from("car")));
+        assert_eq!(false, Solution::is_anagram(String::from("ca"), String::from("car")));
+        assert_eq!(false, Solution::is_anagram(String::from("cat"), String::from("ca")));
+        assert_eq!(true, Solution::is_anagram2(String::from("anagram"), String::from("nagaram")));
+        assert_eq!(false, Solution::is_anagram2(String::from("cat"), String::from("car")));
+        assert_eq!(false, Solution::is_anagram2(String::from("ca"), String::from("car")));
+        assert_eq!(false, Solution::is_anagram2(String::from("cat"), String::from("ca")));
     }
 }

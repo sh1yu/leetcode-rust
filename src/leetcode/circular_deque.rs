@@ -122,13 +122,13 @@ mod tests {
         let k = 20;
         let value = 3;
         let mut obj = MyCircularDeque::new(k);
-        println!("{}", obj.insert_front(value));
-        println!("{}", obj.insert_last(value));
-        println!("{}", obj.delete_front());
-        println!("{}", obj.delete_last());
-        println!("{}", obj.get_front());
-        println!("{}", obj.get_rear());
-        println!("{}", obj.is_empty());
-        println!("{}", obj.is_full());
+        assert_eq!(true, obj.insert_front(value));
+        assert_eq!(true, obj.insert_last(value));
+        assert_eq!(true, obj.delete_front());
+        assert_eq!(true, obj.delete_last());
+        assert_eq!(-1, obj.get_front());
+        assert_eq!(-1, obj.get_rear());
+        assert_eq!(true, obj.is_empty());
+        assert_eq!(false, obj.is_full());
     }
 }

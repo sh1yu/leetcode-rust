@@ -34,8 +34,8 @@ mod tests {
 
     #[test]
     fn it_works() {
-        println!("{:?}", Solution::is_valid(String::from("{{}}")));
-        println!("{:?}", Solution::is_valid(String::from("{{[]}}")));
-        println!("{:?}", Solution::is_valid(String::from("{{[}]}")));
+        assert_eq!(true, Solution::is_valid(String::from("{{}}")));
+        assert_eq!(true, Solution::is_valid(String::from("{{[]}}")));
+        assert_eq!(false, Solution::is_valid(String::from("{{[}]}")));
     }
 }

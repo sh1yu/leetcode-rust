@@ -34,8 +34,8 @@ mod tests {
 
     #[test]
     fn it_works() {
-        println!("{}", Solution::largest_rectangle_area(vec![2, 1, 5, 6, 2, 3]));
-        println!("{}", Solution::largest_rectangle_area(vec![2, 4]));
-        println!("{}", Solution::largest_rectangle_area(vec![1, 4, 4, 2, 4, 4]));
+        assert_eq!(10, Solution::largest_rectangle_area(vec![2, 1, 5, 6, 2, 3]));
+        assert_eq!(4, Solution::largest_rectangle_area(vec![2, 4]));
+        assert_eq!(10, Solution::largest_rectangle_area(vec![1, 4, 4, 2, 4, 4]));
     }
 }

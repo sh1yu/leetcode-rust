@@ -28,12 +28,12 @@ mod tests {
     #[test]
     fn it_works() {
         let mut vec1 = vec![0, 0, 0, 1, 3, 3, 12];
-        println!("{} {:?}", Solution::remove_duplicates(&mut vec1), vec1);
+        assert_eq!((4, vec![0, 1, 3, 12, 3, 3, 12]), (Solution::remove_duplicates(&mut vec1), vec1));
 
         let mut vec2 = vec![];
-        println!("{} {:?}", Solution::remove_duplicates(&mut vec2), vec2);
+        assert_eq!((0, vec![]), (Solution::remove_duplicates(&mut vec2), vec2));
 
         let mut vec3 = vec![0, 0, 0];
-        println!("{} {:?}", Solution::remove_duplicates(&mut vec3), vec3);
+        assert_eq!((1, vec![0, 0, 0]), (Solution::remove_duplicates(&mut vec3), vec3));
     }
 }

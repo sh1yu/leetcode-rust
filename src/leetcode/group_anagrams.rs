@@ -25,8 +25,13 @@ mod tests {
 
     #[test]
     fn it_works() {
-        println!("{:?}", Solution::group_anagrams(vec!["eat".into(), "tea".into(), "tan".into(), "ate".into(), "nat".into(), "bat".into()]));
-        println!("{:?}", Solution::group_anagrams(vec!["".into()]));
-        println!("{:?}", Solution::group_anagrams(vec!["a".into()]));
+
+        let mut expected = vec![vec!["eat", "tea", "ate"], vec!["tan", "nat"], vec!["bat"]];
+        let mut actual = Solution::group_anagrams(vec!["eat".into(), "tea".into(), "tan".into(), "ate".into(), "nat".into(), "bat".into()]);
+        assert_eq!(expected.sort(), actual.sort());
+
+        assert_eq!(vec![vec![""]], Solution::group_anagrams(vec!["".into()]));
+
+        assert_eq!(vec![vec!["a"]], Solution::group_anagrams(vec!["a".into()]));
     }
 }

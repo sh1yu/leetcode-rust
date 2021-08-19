@@ -39,10 +39,10 @@ mod tests {
 
     #[test]
     fn it_works() {
-        println!("{:?}", Solution::max_sliding_window(vec![1, 3, -1, -3, 5, 3, 6, 7], 3));
-        println!("{:?}", Solution::max_sliding_window(vec![1], 1));
-        println!("{:?}", Solution::max_sliding_window(vec![1, -1], 1));
-        println!("{:?}", Solution::max_sliding_window(vec![9, 11], 2));
-        println!("{:?}", Solution::max_sliding_window(vec![4, -2], 2));
+        assert_eq!(vec![3, 3, 5, 5, 6, 7], Solution::max_sliding_window(vec![1, 3, -1, -3, 5, 3, 6, 7], 3));
+        assert_eq!(vec![1], Solution::max_sliding_window(vec![1], 1));
+        assert_eq!(vec![1, -1], Solution::max_sliding_window(vec![1, -1], 1));
+        assert_eq!(vec![11], Solution::max_sliding_window(vec![9, 11], 2));
+        assert_eq!(vec![4], Solution::max_sliding_window(vec![4, -2], 2));
     }
 }

@@ -75,7 +75,7 @@ mod tests {
         l2.as_mut().unwrap().next = Option::Some(Box::new(ListNode::new(12)));
         l2.as_mut().unwrap().next.as_mut().unwrap().next = Option::Some(Box::new(ListNode::new(18)));
 
-        println!("{}", Solution::format_list(&Solution::merge_two_lists(l1, l2)));
+        assert_eq!("5 -> 10 -> 12 -> 18 -> 20 -> 30 -> None", Solution::format_list(&Solution::merge_two_lists(l1, l2)));
     }
 
     #[test]
@@ -88,6 +88,6 @@ mod tests {
         l2.as_mut().unwrap().next = Option::Some(Box::new(ListNode::new(12)));
         l2.as_mut().unwrap().next.as_mut().unwrap().next = Option::Some(Box::new(ListNode::new(18)));
 
-        println!("{}", Solution::format_list(&Solution::merge_two_lists2(l1, l2)));
+        assert_eq!("5 -> 10 -> 12 -> 18 -> 20 -> 30 -> None", Solution::format_list(&Solution::merge_two_lists2(l1, l2)));
     }
 }

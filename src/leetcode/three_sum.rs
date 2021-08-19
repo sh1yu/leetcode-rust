@@ -54,7 +54,7 @@ mod tests {
 
     #[test]
     fn it_works() {
-        println!("{:?}", Solution::three_sum(vec![-1, 0, 1, 2, -1, -4]));
-        println!("{:?}", Solution::three_sum(vec![-2, 0, 0, 2, 2]));
+        assert_eq!(vec![vec![-1, -1, 2], vec![-1, 0, 1]], Solution::three_sum(vec![-1, 0, 1, 2, -1, -4]));
+        assert_eq!(vec![vec![-2, 0, 2]], Solution::three_sum(vec![-2, 0, 0, 2, 2]));
     }
 }

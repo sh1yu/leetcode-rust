@@ -37,9 +37,9 @@ mod tests {
 
     #[test]
     fn it_works() {
-        println!("{:?}", Solution::plus_one(vec![1, 2, 3]));
-        println!("{:?}", Solution::plus_one(vec![0]));
-        println!("{:?}", Solution::plus_one(vec![8, 9, 9]));
-        println!("{:?}", Solution::plus_one(vec![9, 9, 9, 9]));
+        assert_eq!(vec![1, 2, 4], Solution::plus_one(vec![1, 2, 3]));
+        assert_eq!(vec![1], Solution::plus_one(vec![0]));
+        assert_eq!(vec![9, 0, 0], Solution::plus_one(vec![8, 9, 9]));
+        assert_eq!(vec![1, 0, 0, 0, 0], Solution::plus_one(vec![9, 9, 9, 9]));
     }
 }

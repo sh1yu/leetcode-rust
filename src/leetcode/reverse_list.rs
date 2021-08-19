@@ -35,6 +35,6 @@ mod tests {
         tail = tail.next.as_mut().unwrap();
         tail.next = Option::Some(Box::new(ListNode::new(5)));
 
-        println!("{}", Solution::format_list(&Solution::reverse_list(head)));
+        assert_eq!("5 -> 4 -> 3 -> 2 -> 1 -> None", Solution::format_list(&Solution::reverse_list(head)));
     }
 }

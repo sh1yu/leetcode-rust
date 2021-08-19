@@ -22,6 +22,7 @@ mod tests {
     fn it_works() {
         let mut vec1 = vec![1, 2, 3, 4, 5, 6, 7];
         Solution::rotate(&mut vec1, 2);
-        println!("{:?}", vec1);
+
+        assert_eq!(vec![6, 7, 1, 2, 3, 4, 5], vec1);
     }
 }

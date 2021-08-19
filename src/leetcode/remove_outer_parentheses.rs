@@ -39,8 +39,8 @@ mod tests {
 
     #[test]
     fn it_works() {
-        println!("{}", Solution::remove_outer_parentheses("(()())(())".into()));
-        println!("{}", Solution::remove_outer_parentheses("(()())(())(()(()))".into()));
-        println!("{}", Solution::remove_outer_parentheses("()()".into()));
+        assert_eq!("()()()", Solution::remove_outer_parentheses("(()())(())".into()));
+        assert_eq!("()()()()(())", Solution::remove_outer_parentheses("(()())(())(()(()))".into()));
+        assert_eq!("", Solution::remove_outer_parentheses("()()".into()));
     }
 }

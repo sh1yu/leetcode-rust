@@ -37,8 +37,8 @@ mod tests {
 
     #[test]
     fn it_works() {
-        println!("{:?}", Solution::intersect(vec![1, 2, 3, 4, 2, 5, 5, 5], vec![1, 2, 2, 5, 5]));
-        println!("{:?}", Solution::intersect(vec![1, 2, 2, 1], vec![2, 2]));
-        println!("{:?}", Solution::intersect(vec![4, 9, 5], vec![9, 4, 9, 8, 4]));
+        assert_eq!(vec![1, 2, 2, 5, 5], Solution::intersect(vec![1, 2, 3, 4, 2, 5, 5, 5], vec![1, 2, 2, 5, 5]));
+        assert_eq!(vec![2, 2], Solution::intersect(vec![1, 2, 2, 1], vec![2, 2]));
+        assert_eq!(vec![9, 4], Solution::intersect(vec![4, 9, 5], vec![9, 4, 9, 8, 4]));
     }
 }

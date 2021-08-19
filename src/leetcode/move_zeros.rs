@@ -38,14 +38,14 @@ mod tests {
     fn it_works() {
         let mut vec1 = vec![0, 1, 0, 3, 12];
         Solution::move_zeroes(&mut vec1);
-        println!("{:?}", vec1);
+        assert_eq!(vec![1, 3, 12, 0, 0], vec1);
 
         let mut vec2 = vec![];
         Solution::move_zeroes(&mut vec2);
-        println!("{:?}", vec2);
+        assert_eq!(Vec::<i32>::new(), vec2);
 
         let mut vec3 = vec![0, 0, 0];
         Solution::move_zeroes(&mut vec3);
-        println!("{:?}", vec3);
+        assert_eq!(vec![0, 0, 0], vec3);
     }
 }

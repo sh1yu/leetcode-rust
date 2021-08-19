@@ -68,8 +68,8 @@ mod tests {
         obj.push(2);
         obj.push(5);
         obj.push(6);
-        println!("{}", obj.pop());
-        println!("{}", obj.top());
-        println!("{}", obj.get_min());
+        assert_eq!(6, obj.pop());
+        assert_eq!(5, obj.top());
+        assert_eq!(2, obj.get_min());
     }
 }

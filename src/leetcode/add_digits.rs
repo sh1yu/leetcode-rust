@@ -15,9 +15,9 @@ mod tests {
 
     #[test]
     fn it_works() {
-        println!("{:?}", Solution::add_digits(15));
-        println!("{:?}", Solution::add_digits(99));
-        println!("{:?}", Solution::add_digits(1024));
-        println!("{:?}", Solution::add_digits(56));
+        assert_eq!(6, Solution::add_digits(15));
+        assert_eq!(9, Solution::add_digits(99));
+        assert_eq!(7, Solution::add_digits(1024));
+        assert_eq!(2, Solution::add_digits(56));
     }
 }
