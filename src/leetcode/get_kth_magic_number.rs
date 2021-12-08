@@ -1,7 +1,11 @@
-use super::Solution;
-use std::collections::{BinaryHeap, HashSet};
-use std::cmp::Reverse;
+//有些数的素因子只有 3，5，7，请设计一个算法找出第 k 个数。
+//注意，不是必须有这些素因子，而是必须不包含其他的素因子。例如，前几个数按顺序应该是 1，3，5，7，9，15，21。
 
+use super::Solution;
+use std::cmp::Reverse;
+use std::collections::{BinaryHeap, HashSet};
+
+#[allow(dead_code)]
 impl Solution {
     pub fn get_kth_magic_number(k: i32) -> i32 {
         if k == 1 {

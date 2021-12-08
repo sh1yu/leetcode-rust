@@ -16,6 +16,7 @@ use std::cell::RefCell;
 use super::{Solution, TreeNode};
 
 //思路：递归
+#[allow(dead_code)]
 impl Solution {
     pub fn max_depth(root: Option<Rc<RefCell<TreeNode>>>) -> i32 {
         match root.as_ref() {

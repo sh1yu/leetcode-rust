@@ -8,6 +8,7 @@
 use super::{Solution};
 use std::collections::HashMap;
 
+#[allow(dead_code)]
 impl Solution {
     pub fn two_sum(nums: Vec<i32>, target: i32) -> Vec<i32> {
         let mut ht = HashMap::with_capacity(nums.len());

@@ -7,6 +7,7 @@ use super::Solution;
 use std::collections::BinaryHeap;
 
 // 最大堆，堆顶放入最大值，如果还有更小的则弹出并将较小的入堆，O(nlogk)
+#[allow(dead_code)]
 impl Solution {
     pub fn least_numbers(arr: Vec<i32>, k: i32) -> Vec<i32> {
         let mut heap = BinaryHeap::with_capacity(k as usize);

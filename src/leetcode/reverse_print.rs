@@ -3,8 +3,9 @@
 //
 // https://leetcode-cn.com/problems/cong-wei-dao-tou-da-yin-lian-biao-lcof/
 
-use super::{Solution, ListNode};
+use super::{ListNode, Solution};
 
+#[allow(dead_code)]
 impl Solution {
     pub fn reverse_print(head: Option<Box<ListNode>>) -> Vec<i32> {
         let mut ans = vec![];
@@ -14,7 +15,7 @@ impl Solution {
                 ans.push(n.val);
                 return ans;
             }
-            None => ans
+            None => ans,
         }
     }
 }

@@ -6,6 +6,7 @@
 //
 use super::{Solution};
 
+#[allow(dead_code)]
 impl Solution {
     pub fn merge(nums1: &mut Vec<i32>, m: i32, nums2: &mut Vec<i32>, n: i32) {
         let mut i = m + n - 1;

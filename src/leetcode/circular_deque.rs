@@ -13,6 +13,7 @@
 // isFull()：检查双端队列是否满了。
 use std::collections::VecDeque;
 
+#[allow(dead_code)]
 struct MyCircularDeque {
     cache: VecDeque<i32>,
     capacity: usize,
@@ -23,6 +24,8 @@ struct MyCircularDeque {
  * `&self` means the method takes an immutable reference.
  * If you need a mutable reference, change it to `&mut self` instead.
  */
+
+#[allow(dead_code)]
 impl MyCircularDeque {
     /** Initialize your data structure here. Set the size of the deque to be k. */
     fn new(k: i32) -> Self {

@@ -8,6 +8,7 @@
 
 use super::Solution;
 
+#[allow(dead_code)]
 impl Solution {
     pub fn is_ugly(n: i32) -> bool {
         if n <= 0 { return false }

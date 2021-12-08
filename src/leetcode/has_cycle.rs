@@ -10,6 +10,7 @@ use std::rc::Rc;
 use std::cell::RefCell;
 use super::{RcListNode, Solution};
 
+#[allow(dead_code)]
 impl Solution {
     pub fn has_cycle(head: Option<Rc<RefCell<RcListNode>>>) -> bool {
         return match head {

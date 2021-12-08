@@ -5,11 +5,16 @@
 
 use super::Solution;
 
+#[allow(dead_code)]
 impl Solution {
     pub fn replace_space(s: String) -> String {
         let mut res = String::new();
         s.chars().for_each(|ch| {
-            if ch == ' ' { res.push_str("%20"); } else { res.push(ch); }
+            if ch == ' ' {
+                res.push_str("%20");
+            } else {
+                res.push(ch);
+            }
         });
         res
     }
@@ -21,6 +26,9 @@ mod tests {
 
     #[test]
     fn it_works() {
-        assert_eq!("We%20are%20happy.", Solution::replace_space("We are happy.".into()));
+        assert_eq!(
+            "We%20are%20happy.",
+            Solution::replace_space("We are happy.".into())
+        );
     }
 }

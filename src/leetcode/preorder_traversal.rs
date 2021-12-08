@@ -3,9 +3,10 @@
 
 use super::{Solution, TreeNode};
 
-use std::rc::Rc;
 use std::cell::RefCell;
+use std::rc::Rc;
 
+#[allow(dead_code)]
 impl Solution {
     pub fn preorder_traversal(root: Option<Rc<RefCell<TreeNode>>>) -> Vec<i32> {
         let mut ans = vec![];

@@ -4,8 +4,9 @@
 //
 // 注意：答案中不可以包含重复的三元组。
 
-use super::{Solution};
+use super::Solution;
 
+#[allow(dead_code)]
 impl Solution {
     pub fn three_sum(nums: Vec<i32>) -> Vec<Vec<i32>> {
         let mut result = Vec::new();
@@ -54,7 +55,13 @@ mod tests {
 
     #[test]
     fn it_works() {
-        assert_eq!(vec![vec![-1, -1, 2], vec![-1, 0, 1]], Solution::three_sum(vec![-1, 0, 1, 2, -1, -4]));
-        assert_eq!(vec![vec![-2, 0, 2]], Solution::three_sum(vec![-2, 0, 0, 2, 2]));
+        assert_eq!(
+            vec![vec![-1, -1, 2], vec![-1, 0, 1]],
+            Solution::three_sum(vec![-1, 0, 1, 2, -1, -4])
+        );
+        assert_eq!(
+            vec![vec![-2, 0, 2]],
+            Solution::three_sum(vec![-2, 0, 0, 2, 2])
+        );
     }
 }

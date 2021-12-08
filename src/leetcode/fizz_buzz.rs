@@ -10,6 +10,7 @@
 
 use super::Solution;
 
+#[allow(dead_code)]
 impl Solution {
     pub fn fizz_buzz(n: i32) -> Vec<String> {
         let mut res = vec!["".into(); n as usize];

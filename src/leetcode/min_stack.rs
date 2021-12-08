@@ -6,16 +6,17 @@
 // top()—— 获取栈顶元素。
 // getMin() —— 检索栈中的最小元素。
 //
+#[allow(dead_code)]
 struct MinStack {
     cache: Vec<i32>,
     min: Vec<i32>,
 }
 
-
 /**
  * `&self` means the method takes an immutable reference.
  * If you need a mutable reference, change it to `&mut self` instead.
  */
+#[allow(dead_code)]
 impl MinStack {
     /** initialize your data structure here. */
     fn new() -> Self {
@@ -41,11 +42,19 @@ impl MinStack {
     }
 
     fn top(&self) -> i32 {
-        if self.cache.is_empty() { -1 } else { self.cache[self.cache.len() - 1] }
+        if self.cache.is_empty() {
+            -1
+        } else {
+            self.cache[self.cache.len() - 1]
+        }
     }
 
     fn get_min(&self) -> i32 {
-        if self.min.is_empty() { -1 } else { self.min[self.min.len() - 1] }
+        if self.min.is_empty() {
+            -1
+        } else {
+            self.min[self.min.len() - 1]
+        }
     }
 }
 

@@ -4,6 +4,7 @@
 
 use super::{ListNode, Solution};
 
+#[allow(dead_code)]
 impl Solution {
     pub fn swap_pairs(head: Option<Box<ListNode>>) -> Option<Box<ListNode>> {
         let mut dummy = ListNode::new(0);
@@ -22,7 +23,7 @@ impl Solution {
             } else {
                 tail.next = Some(n1);
             }
-        };
+        }
 
         dummy.next
     }
@@ -36,10 +37,33 @@ mod tests {
     fn it_works() {
         let mut l1 = Option::Some(Box::new(ListNode::new(10)));
         l1.as_mut().unwrap().next = Option::Some(Box::new(ListNode::new(20)));
-        l1.as_mut().unwrap().next.as_mut().unwrap().next = Option::Some(Box::new(ListNode::new(30)));
-        l1.as_mut().unwrap().next.as_mut().unwrap().next.as_mut().unwrap().next = Option::Some(Box::new(ListNode::new(40)));
-        l1.as_mut().unwrap().next.as_mut().unwrap().next.as_mut().unwrap().next.as_mut().unwrap().next = Option::Some(Box::new(ListNode::new(50)));
+        l1.as_mut().unwrap().next.as_mut().unwrap().next =
+            Option::Some(Box::new(ListNode::new(30)));
+        l1.as_mut()
+            .unwrap()
+            .next
+            .as_mut()
+            .unwrap()
+            .next
+            .as_mut()
+            .unwrap()
+            .next = Option::Some(Box::new(ListNode::new(40)));
+        l1.as_mut()
+            .unwrap()
+            .next
+            .as_mut()
+            .unwrap()
+            .next
+            .as_mut()
+            .unwrap()
+            .next
+            .as_mut()
+            .unwrap()
+            .next = Option::Some(Box::new(ListNode::new(50)));
 
-        assert_eq!("20 -> 10 -> 40 -> 30 -> 50 -> None", Solution::format_list(&Solution::swap_pairs(l1)));
+        assert_eq!(
+            "20 -> 10 -> 40 -> 30 -> 50 -> None",
+            Solution::format_list(&Solution::swap_pairs(l1))
+        );
     }
 }

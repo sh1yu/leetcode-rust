@@ -3,7 +3,7 @@
 
 use super::{ListNode, Solution};
 
-
+#[allow(dead_code)]
 impl Solution {
     pub fn reverse_list(head: Option<Box<ListNode>>) -> Option<Box<ListNode>> {
         let mut dummy = ListNode::new(0);
@@ -35,6 +35,9 @@ mod tests {
         tail = tail.next.as_mut().unwrap();
         tail.next = Option::Some(Box::new(ListNode::new(5)));
 
-        assert_eq!("5 -> 4 -> 3 -> 2 -> 1 -> None", Solution::format_list(&Solution::reverse_list(head)));
+        assert_eq!(
+            "5 -> 4 -> 3 -> 2 -> 1 -> None",
+            Solution::format_list(&Solution::reverse_list(head))
+        );
     }
 }

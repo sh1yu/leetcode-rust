@@ -10,8 +10,9 @@
 //
 // 必须在原数组上操作，不能拷贝额外的数组。
 // 尽量减少操作次数。
-use super::{Solution};
+use super::Solution;
 
+#[allow(dead_code)]
 impl Solution {
     pub fn move_zeroes(nums: &mut Vec<i32>) {
         let mut j = 0;

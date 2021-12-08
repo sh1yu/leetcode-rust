@@ -5,6 +5,7 @@
 use super::Solution;
 use std::collections::HashMap;
 
+#[allow(dead_code)]
 impl Solution {
 
     // 常规hash思路

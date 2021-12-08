@@ -13,6 +13,7 @@ struct MyTuple {
     item: (i32, i32),
 }
 
+#[allow(dead_code)]
 impl MyTuple {
     pub fn new(item: (i32, i32)) -> MyTuple {
         MyTuple {
@@ -39,6 +40,7 @@ impl Ord for MyTuple {
     }
 }
 
+#[allow(dead_code)]
 impl Solution {
     pub fn top_k_frequent(nums: Vec<i32>, k: i32) -> Vec<i32> {
         let mut map = HashMap::new();

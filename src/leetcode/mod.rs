@@ -1,42 +1,42 @@
+use std::cell::RefCell;
 use std::fmt::{Debug, Display, Formatter, Result};
 use std::rc::Rc;
-use std::cell::RefCell;
 
+mod add_digits;
+mod circular_deque;
+mod detect_cycle;
+mod fizz_buzz;
+mod get_kth_magic_number;
+mod get_least_numbers;
+mod group_anagrams;
+mod has_cycle;
+mod inorder_traversal;
+mod intersection_of_two_arrays_ii;
+mod is_ugly;
+mod largest_rectangle_area;
+mod max_depth;
+mod max_sliding_window;
+mod merge;
 mod merge_two_lists;
+mod min_stack;
 mod move_zeros;
+mod nth_ugly_number;
+mod plus_one;
+mod preorder_traversal;
+mod remove_duplicates;
+mod remove_outer_parentheses;
+mod replace_space;
+mod reverse_k_group;
+mod reverse_list;
+mod reverse_print;
+mod rotate;
 mod swap_pairs;
 mod three_sum;
-mod reverse_list;
-mod has_cycle;
-mod detect_cycle;
-mod circular_deque;
-mod remove_duplicates;
-mod rotate;
-mod merge;
-mod two_sum;
-mod plus_one;
-mod trap;
-mod valid_parentheses;
-mod min_stack;
-mod largest_rectangle_area;
-mod valid_anagram;
-mod group_anagrams;
-mod intersection_of_two_arrays_ii;
-mod max_sliding_window;
-mod reverse_k_group;
-mod inorder_traversal;
-mod preorder_traversal;
-mod remove_outer_parentheses;
-mod fizz_buzz;
-mod add_digits;
-mod max_depth;
-mod get_least_numbers;
-mod is_ugly;
-mod nth_ugly_number;
 mod top_k_frequent;
-mod replace_space;
-mod reverse_print;
-mod get_kth_magic_number;
+mod trap;
+mod two_sum;
+mod valid_anagram;
+mod valid_parentheses;
 
 // Definition for singly-linked list.
 #[derive(PartialEq, Eq, Clone, Debug)]
@@ -48,10 +48,7 @@ pub struct ListNode {
 impl ListNode {
     #[inline]
     pub fn new(val: i32) -> Self {
-        ListNode {
-            next: None,
-            val,
-        }
+        ListNode { next: None, val }
     }
 }
 
@@ -67,6 +64,7 @@ pub struct RcListNode {
     pub next: Option<Rc<RefCell<RcListNode>>>,
 }
 
+#[allow(dead_code)]
 impl RcListNode {
     pub fn new(val: i32) -> RcListNode {
         RcListNode {
@@ -83,6 +81,7 @@ pub struct TreeNode {
     pub right: Option<Rc<RefCell<TreeNode>>>,
 }
 
+#[allow(dead_code)]
 impl TreeNode {
     #[inline]
     pub fn new(val: i32) -> Self {
@@ -96,11 +95,12 @@ impl TreeNode {
 
 pub struct Solution {}
 
+#[allow(dead_code)]
 impl Solution {
     pub fn format_list(head: &Option<Box<ListNode>>) -> String {
         return match head {
             None => String::from("None"),
-            Some(n) => format!("{} -> {}", n.val, Solution::format_list(&n.next))
+            Some(n) => format!("{} -> {}", n.val, Solution::format_list(&n.next)),
         };
     }
 }

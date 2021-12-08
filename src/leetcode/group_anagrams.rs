@@ -5,6 +5,7 @@
 use super::Solution;
 use std::collections::HashMap;
 
+#[allow(dead_code)]
 impl Solution {
     pub fn group_anagrams(strs: Vec<String>) -> Vec<Vec<String>> {
 

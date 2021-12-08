@@ -9,6 +9,7 @@ use std::rc::Rc;
 use std::cell::RefCell;
 use super::{RcListNode, Solution};
 
+#[allow(dead_code)]
 impl Solution {
     pub fn detect_cycle(head: Option<Rc<RefCell<RcListNode>>>) -> Option<i32> {
         return match head {

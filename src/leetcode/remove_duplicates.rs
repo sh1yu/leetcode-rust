@@ -3,8 +3,9 @@
 //
 // 不要使用额外的数组空间，你必须在 原地 修改输入数组 并在使用 O(1) 额外空间的条件下完成。
 //
-use super::{Solution};
+use super::Solution;
 
+#[allow(dead_code)]
 impl Solution {
     pub fn remove_duplicates(nums: &mut Vec<i32>) -> i32 {
         if nums.len() < 2 {
@@ -28,12 +29,18 @@ mod tests {
     #[test]
     fn it_works() {
         let mut vec1 = vec![0, 0, 0, 1, 3, 3, 12];
-        assert_eq!((4, vec![0, 1, 3, 12, 3, 3, 12]), (Solution::remove_duplicates(&mut vec1), vec1));
+        assert_eq!(
+            (4, vec![0, 1, 3, 12, 3, 3, 12]),
+            (Solution::remove_duplicates(&mut vec1), vec1)
+        );
 
         let mut vec2 = vec![];
         assert_eq!((0, vec![]), (Solution::remove_duplicates(&mut vec2), vec2));
 
         let mut vec3 = vec![0, 0, 0];
-        assert_eq!((1, vec![0, 0, 0]), (Solution::remove_duplicates(&mut vec3), vec3));
+        assert_eq!(
+            (1, vec![0, 0, 0]),
+            (Solution::remove_duplicates(&mut vec3), vec3)
+        );
     }
 }

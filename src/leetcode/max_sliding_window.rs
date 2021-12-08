@@ -8,6 +8,7 @@
 use super::Solution;
 use std::collections::VecDeque;
 
+#[allow(dead_code)]
 impl Solution {
     pub fn max_sliding_window(nums: Vec<i32>, k: i32) -> Vec<i32> {
         let mut queue = VecDeque::new();

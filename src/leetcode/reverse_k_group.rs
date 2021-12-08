@@ -11,8 +11,9 @@
 // 你不能只是单纯的改变节点内部的值，而是需要实际进行节点交换。
 //
 
-use super::{Solution, ListNode};
+use super::{ListNode, Solution};
 
+#[allow(dead_code)]
 impl Solution {
     pub fn reverse_k_group(head: Option<Box<ListNode>>, k: i32) -> Option<Box<ListNode>> {
         let mut remain = head;
@@ -32,7 +33,10 @@ impl Solution {
 
     // 反转一次，返回反转后的head和remain
     // 如果为最后一次不足以反转，remain为None
-    fn reverse_one(head: Option<Box<ListNode>>, k: i32) -> (Option<Box<ListNode>>, Option<Box<ListNode>>) {
+    fn reverse_one(
+        head: Option<Box<ListNode>>,
+        k: i32,
+    ) -> (Option<Box<ListNode>>, Option<Box<ListNode>>) {
         let mut pre = head.as_ref();
         for _ in 0..k {
             if pre.is_none() {
@@ -71,6 +75,9 @@ mod tests {
         next = next.next.as_mut().unwrap();
         next.next = Option::Some(Box::new(ListNode::new(50)));
 
-        assert_eq!("30 -> 20 -> 10 -> 40 -> 50 -> None", Solution::format_list(&Solution::reverse_k_group(l1, 3)));
+        assert_eq!(
+            "30 -> 20 -> 10 -> 40 -> 50 -> None",
+            Solution::format_list(&Solution::reverse_k_group(l1, 3))
+        );
     }
 }

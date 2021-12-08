@@ -8,6 +8,7 @@
 //
 use super::Solution;
 
+#[allow(dead_code)]
 impl Solution {
     pub fn is_valid(s: String) -> bool {
         let mut stack = Vec::new();

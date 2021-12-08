@@ -5,9 +5,10 @@
 // https://leetcode-cn.com/problems/ugly-number-ii/
 
 use super::Solution;
-use std::collections::{BinaryHeap, HashSet};
 use std::cmp::Reverse;
+use std::collections::{BinaryHeap, HashSet};
 
+#[allow(dead_code)]
 impl Solution {
     pub fn nth_ugly_number(n: i32) -> i32 {
         let mut set = HashSet::new();
