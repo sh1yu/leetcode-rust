@@ -29,6 +29,7 @@ mod replace_space;
 mod reverse_k_group;
 mod reverse_list;
 mod reverse_print;
+mod roman_to_int;
 mod rotate;
 mod swap_pairs;
 mod three_sum;
@@ -37,6 +38,7 @@ mod trap;
 mod two_sum;
 mod valid_anagram;
 mod valid_parentheses;
+mod your_order_please;
 
 // Definition for singly-linked list.
 #[derive(PartialEq, Eq, Clone, Debug)]
